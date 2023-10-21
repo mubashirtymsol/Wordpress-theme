@@ -1,0 +1,115 @@
+		Wordpress Theme Development
+
+	files
+
+style.css
+screenshot.php
+index.php
+functions.php
+header.php
+footer.php
+
+	Set theme Path
+
+echo get_template_directory_uri();
+bloginfo('template_directory')
+
+	Calling header and footer
+header.php   footer.php
+get_header() get_footer()
+header-top.php  footer-copyright.php
+get_header('top')  get_footer('copyright')
+
+
+       Creating Nav Menu
+
+
+register_nav_menus()
+wp_nav_menu()
+
+<?php register_nav_menus(array('Primary-Menu'=>'Header'))?>
+
+<?php wp_nav_menu(array('theme_location'=>'primary-menu','menu_class'=>'haha')) ?>
+
+
+the_title()
+echo site_url()
+the_post()
+the_content()
+get_the_content()
+
+
+//Add feature image| Thumbnail Image to admin panel
+
+add_theme_support('post-thumbnails')
+
+//Show thumbnail Image with tag
+the_post_thumbnail(); without parameter show thumbnail
+the_post_thumbnail('thumbnail');150*150
+the_post_thumbnail('medium'); 300*300
+the_post_thumbnail('large'); 1024*1024 max
+the_post_thumbnail('full'); original image resolution (unmodified)
+the_post_thumbnail(array(100,100));
+
+// Get image Path
+wp_get_attachment_image_src(get_post_thumbnail_id(), ‘large’);
+
+// Logo Image option in Admin Panel
+add_theme_support('custom-header');
+
+//Use logo image in header
+get_header_image(); // give the path of image
+
+Return Index.php mean home page or post page
+echo site_url();
+
+//Page Template
+
+write //Template Name: contact "This will create a template "
+
+//Display Post
+have_posts() //use in while loop 
+the_post()  //how many post used in while loop 
+
+// e.g. while(have_posts()){ the_post()  html code }
+
+// To add date
+
+echo get_the_date() // when we use this we also use echo 
+the_date() // without echo
+
+//For displaying short description 
+
+the_excerpt()
+
+
+// Calling the plugin css we use below function in header
+wp_head();
+// Calling the plugin js we use below function in footer
+wp_footer();
+
+// We use wp-pagenavi plugin to use navigation in our theme
+
+//Pagination
+
+// Single Post Displaying Content
+we have to create file fixed name single.php
+
+Now we have to use the_permalink() function inside href which will redirect us to details page
+Also we can add page id inside the_permalink('id') to refer the id page
+
+To display autor name 
+the_author() when not working then write the_post() on top of the page
+
+
+//Comment Form
+
+comment_form()
+
+
+// To Display comment Lists in single page
+comments_template();  // this function is used for form as well as display comment
+
+wp_comment_list(); is used for displaying only comment
+
+category.php

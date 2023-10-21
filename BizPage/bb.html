@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Posts</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .blog-post-container {
+            display: flex;
+            margin-bottom: 20px;
+        }
+
+        .blog-post {
+            flex: 1;
+            margin: 0 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+
+        .blog-image img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .blog-title {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .blog-date {
+            font-style: italic;
+            color: #555;
+        }
+
+        .blog-description {
+            margin-top: 10px;
+        }
+
+        .read-more-button {
+            display: block;
+            margin-top: 10px;
+            text-decoration: none;
+            background-color: #007bff;
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .read-more-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="blog-post-container">
+        <div class="blog-post">
+            <div class="blog-image">
+                <img src="blog1.jpg" alt="Blog Post 1 Image">
+            </div>
+            <h2 class="blog-title">Blog Post 1 Title</h2>
+            <p class="blog-date">Published on: October 21, 2023</p>
+            <p class="blog-description">This is the short description of the first blog post. It provides a brief overview of the content.</p>
+            <a href="#" class="read-more-button">Read More</a>
+        </div>
+
+        <div class="blog-post">
+            <div class="blog-image">
+                <img src="blog2.jpg" alt="Blog Post 2 Image">
+            </div>
+            <h2 class="blog-title">Blog Post 2 Title</h2>
+            <p class="blog-date">Published on: October 20, 2023</p>
+            <p class="blog-description">This is the short description of the second blog post. It provides a brief overview of the content.</p>
+            <a href="#" class="read-more-button">Read More</a>
+        </div>
+    </div>
+</body>
+</html>
