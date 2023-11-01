@@ -113,3 +113,32 @@ comments_template();  // this function is used for form as well as display comme
 wp_comment_list(); is used for displaying only comment
 
 category.php
+
+//Show sidebar Widget on admin panel 
+register_sidebar( array('name'=> 'Sidebar Location', 'id' => 'sidebar'))
+
+//Call the sidebar where you want 
+dynamic_sidebar('id')
+
+//Add sidebar File in Wordpress like header and footer so for that we have 
+to create file sidebar.php and paste code there if multiple then sidebar-1.php etc
+get_sidebar()
+
+Dynamic Page Title 
+<?php bloginfo('name'); ?> <?php wp_title() ?> <?php if(is_front_page()) {
+echo "|"; bloginfo('description'); } ?>
+i. wp_title()
+ii. bloginfo('name')
+iii. bloginfo('description')	
+
+
+
+//Create a custom background 
+add_theme_support('custom-background') //add this in function.php to make option in admin panel
+
+body_class() // use this function inside the header.php in body tag 
+
+
+//404 
+
+To create 404 error we have to create 404.php which which indicate if user enter wrong url
